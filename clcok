@@ -1,0 +1,141 @@
+/*a program to find various logical answers based on clock problems*/
+
+#include<stdio.h>
+
+int angle();
+
+int first();
+
+int second(); int fourth(); int first()
+{
+
+int a,b,c,d,t,e,f;
+
+printf("enter time in 24 hrs \n enter hours");
+
+scanf("%d",&a); printf("\n enter mins"); scanf("%d",&b);
+printf("To time \n enter hours");
+
+scanf("%d",&c); printf("\n enter mins"); scanf("%d",&d);
+if(d>b)
+
+{
+
+ 
+
+
+
+
+
+
+
+}
+
+else
+
+{
+
+e=d-b;
+
+}
+ 
+c=c-1; d=d+60; e=d-b;
+ 
+
+f=(c-a)*60+e; t=f/65; printf("%d",t); return 0;
+}
+ 
+int fourth()
+
+{
+
+int a,b,c,t;
+
+printf("enter time in 24 hrs \n enter hours");
+
+scanf("%d",&a);
+
+printf("To time \n enter hours");
+
+scanf("%d",&c);
+
+b=c-a; t=b*30; printf("%d",t); return 0;
+}
+
+int second()
+
+{
+
+int a,b,c,d,t,e,f;
+
+printf("enter time in 24 hrs \n enter hours ");
+
+scanf("%d",&a); printf("\n enter mins"); scanf("%d",&b);
+printf("To time \n enter hours");
+
+scanf("%d",&c); printf("\n enter mins"); scanf("%d",&d);
+e=a-12;
+
+f=c-12;
+
+t=((f-e)*60+b+d)/60;
+
+if(a<=17 || b>=17)
+
+{
+
+t=t-1;
+
+}
+
+printf("%d",t);
+
+return 0;
+ 
+
+int angle()
+
+{
+
+int a,b,c,d,t;
+
+printf("enter time in 12 hrs \n enter hours");
+
+scanf("%d",&a); printf("\n enter mins"); scanf("%d",&b); t=(0.5*(60*a-11*b));
+if (t >180)
+
+t=360 -t;
+
+printf("\n degree=%d",t);
+
+return 0;
+
+}
+
+int main()
+
+{
+
+int   n;
+
+printf(" \n 1.to find the no. of 0o angle between given time \n 2. to find the no. of 180o angle between given time \n 3. angle between the hands \n 4. angle taken to make the time");
+
+scanf("%d",&n);
+
+switch(n)
+
+{
+
+case 1: first(); break; case 2: second(); break; case 3: angle(); break; case 4: fourth();
+ 
+break;
+
+default:
+
+printf("not valid");
+
+}
+
+return 0;
+
+}
